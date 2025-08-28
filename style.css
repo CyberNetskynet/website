@@ -1,0 +1,291 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(10, 61, 98, 0.8); /* biru dengan transparansi */
+  backdrop-filter: blur(10px); /* efek blur kaca */
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* <--- tambahin jarak antar menu */
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1rem;
+  padding: 5px 10px; /* <--- tambahan biar lebih lega */
+}
+.navbar ul li a:hover {
+  color: #ffdd59;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://wallpapercave.com/w/wp2603663.jpg") center
+    center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  margin: 0.3rem;
+  background: #ffdd59;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ffdd59;
+  color: #ffdd59;
+}
+
+/* Section */
+.section {
+  padding: 80px 20px;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0a3d62;
+}
+.bg-light {
+  background: #f4f4f4;
+}
+
+/* Paket */
+.paket-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.paket-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.paket-card h3 {
+  margin-bottom: 10px;
+}
+.paket-card .harga {
+  font-size: 1.2rem;
+  color: #0a3d62;
+  margin-bottom: 15px;
+}
+.paket-card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.paket-card ul li {
+  margin: 5px 0;
+}
+.paket-card button {
+  padding: 10px 20px;
+  background: #0a3d62;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.paket-card button:hover {
+  background: #0652dd;
+}
+
+/* Kontak */
+.kontak-info {
+  list-style: none;
+  margin-top: 20px;
+}
+.kontak-info li {
+  margin: 10px 0;
+}
+.kontak-info a {
+  color: #0a3d62;
+  text-decoration: none;
+}
+.kontak-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #0a3d62;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+/* Section Jangkauan */
+.jangkauan {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.jangkauan h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.jangkauan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.area-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.area-card h3 {
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+/* Map Section */
+.jangkauan {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 2rem;
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Kontak */
+.kontak {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.kontak ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+.kontak li {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Style umum tombol */
+.paket-card button {
+  background-color: #007bff; /* default biru */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Hover efek */
+.paket-card button:hover {
+  transform: scale(1.05); /* agak membesar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+/* Beda warna tiap paket */
+.paket-card:nth-child(1) button {
+  background-color: #007bff; /* biru */
+}
+
+.paket-card:nth-child(2) button {
+  background-color: #e63946; /* merah */
+}
+
+.paket-card:nth-child(3) button {
+  background-color: #ff8c00; /* oranye */
+}
