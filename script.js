@@ -1,23 +1,23 @@
-
-// Tampilkan form dengan paket yang dipilih
+// buka form order
 function bukaForm(paket) {
   document.getElementById("form").style.display = "block";
   document.getElementById("paket").value = paket;
-  window.location.href = "#form"; // scroll otomatis
+  document.getElementById("form").scrollIntoView({ behavior: "smooth" });
 }
 
-// Kirim data ke WhatsApp
-document.getElementById("orderForm").addEventListener("submit", function(e) {
+// kirim form ke WhatsApp
+document.getElementById("orderForm").addEventListener("submit", function (e) {
   e.preventDefault();
+
   let nama = document.getElementById("nama").value;
   let alamat = document.getElementById("alamat").value;
   let paket = document.getElementById("paket").value;
 
-  // Nomor WhatsApp tujuan (ubah sesuai kebutuhan)
-  let wa = "6282335545461";
+  let pesan = `Halo Admin, saya ingin mendaftar:\n\nNama: ${nama}\nAlamat: ${alamat}\nPaket: ${paket}`;
 
-  let pesan = `Halo, saya ingin daftar internet.%0A%0ANama: ${nama}%0AAlamat: ${alamat}%0APaket: ${paket}`;
-  let url = `https://wa.me/${wa}?text=${pesan}`;
+  // nomor WA tujuan
+  let nomorWA = "6282335545461"; // ganti dengan nomor admin utama
+  let url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
 
   window.open(url, "_blank");
 });
@@ -64,4 +64,5 @@ window.addEventListener("scroll", () => {
 
 // Placeholder JS, bisa ditambahin animasi/alert
 console.log("Website ISP Trimitra aktif!");
+
 
