@@ -49,7 +49,7 @@
               <li>Support 24/7</li>
               <li>1–3 perangkat</li>
             </ul>
-            <button>Order</button>
+            <button onclick="bukaForm('Paket 15 Mbps')">Order</button>
           </div>
           <div class="paket-card">
             <h3>Paket 22 Mbps</h3>
@@ -61,7 +61,7 @@
               <li>3–5 perangkat</li>
               <li>Prioritas jaringan</li>
             </ul>
-            <button>Order</button>
+            <button onclick="bukaForm('Paket 22 Mbps')">Order</button>
           </div>
           <div class="paket-card">
             <h3>Paket 40 Mbps</h3>
@@ -74,7 +74,7 @@
               <li>Prioritas jaringan</li>
               <li>Static IP (opsional)</li>
             </ul>
-            <button>Order</button>
+            <button onclick="bukaForm('Paket 40 Mbps')">Order</button>
           </div>
         </div>
       </div>
@@ -158,6 +158,25 @@
       </div>
     </section>
 
+    <!-- Form Pendaftaran -->
+    <section id="form" class="section bg-light" style="display:none;">
+      <div class="container">
+        <h2>Form Pendaftaran</h2>
+        <form id="orderForm">
+          <label>Nama Lengkap:</label><br />
+          <input type="text" id="nama" required /><br /><br />
+
+          <label>Alamat:</label><br />
+          <textarea id="alamat" required></textarea><br /><br />
+
+          <label>Paket yang dipilih:</label><br />
+          <input type="text" id="paket" readonly /><br /><br />
+
+          <button type="submit" class="btn">Kirim ke WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <p>&copy; 2025 PT Trimitra Aditama Koneksindo. Semua Hak Dilindungi.</p>
@@ -166,4 +185,6 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+
 
